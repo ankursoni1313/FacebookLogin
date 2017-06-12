@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fb_login_button=(LoginButton)findViewById(R.id.fb_login);
+        callbackManager=CallbackManager.Factory.create();
 
         fb_login_button.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
